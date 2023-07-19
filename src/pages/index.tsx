@@ -16,7 +16,7 @@ export default function Home() {
           <div className="h-32">
             <Image src={"/me.gif"} width={750} height={0} alt="Obi Newman"/>
           </div>
-          <div className="flex flex-row space-x-1.5 font-mono">
+          <div className="flex lg:flex-row lg:space-x-1.5 lg:text-base flex-col text-center font-mono ">
             <div>
               A Software Developer skilled in
             </div>
