@@ -1,9 +1,12 @@
+import { motion } from "framer-motion";
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import Typewriter from "typewriter-effect";
+import DarkToggle from "~/component/DarkToggle";
+import Hero from "~/component/Hero";
+import SocialsList from "~/component/social/SocialsList";
 
-export default function Home() {
+
+const Home = () => {
+
   return (
     <>
       <Head>
@@ -11,46 +14,30 @@ export default function Home() {
         <meta name="description" content="A Junior Software Engineer skilled in Full-Stack Website Development & React Native.  " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center sm:justify-start lg:justify-center bg-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <div className="h-32">
-            <Image src={"/me.gif"} width={750} height={0} alt="Obi Newman"/>
-          </div>
-          <div className="flex lg:flex-row lg:space-x-1.5 lg:text-base flex-col text-center font-mono ">
-            <div>
-              A Software Developer skilled in
-            </div>
-            <Typewriter
-              options={{
-                strings: [" Typescript", " React", " React Native", " MongoDB", " C#", " Java", "Azure", "REST"],
-                autoStart: true,
-                loop: true,
-              }}
-            />            
-          </div>
-          <div className="space-y-2.5">
-            <div className="text-center font-mono">
-            {"I'm a Junior Software Engineer skilled in Full-Stack Website Development & React Native."}     
-            </div>
-          </div>
-          <div className="flex-1">
-              <div className="text-center font-mono">
-                Socials            
-              </div>
-              <div className="flex flex-row min-w-full items-center space-x-11 ">
-                <Link target="_blank" href={'https://github.com/TideOPL/'} rel="noopener noreferrer">
-                  <Image src={"/logo-github.svg"} width={32} height={32} alt="Github"/>
-                </Link>
-                <Link target="_blank" href={'https://www.linkedin.com/in/obi-newman-287b3424b/'} rel="noopener noreferrer">
-                  <Image src={"/logo-linkedin.svg"} width={32} height={32} alt="LinkedIn"/>
-                </Link>
-                <Link target="_blank" href={"https://twitter.com/ObiNewman0/"} rel="noopener noreferrer" >
-                  <Image src={"/logo-twitter.svg"} width={32} height={32} alt="Twitter"/>
-                </Link>
+      <main className="flex min-h-screen min-w-full bg-[#FDFDFD] dark:bg-[#1b1b1d] overflow-hidden">
+        <div className="min-h-fit min-w-fit absolute px-5 py-5" >
+          <DarkToggle Component={motion.div} />
+        </div>
+        <div className="flex min-w-full flex-col items-center sm:justify-start lg:justify-center">
+          <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
+            <Hero />
+            <div className="space-y-2.5">
+              <div className="text-center font-mono dark:text-white">
+                {"I'm a Junior Software Engineer skilled in Full-Stack Website Development & React Native."}     
               </div>
             </div>
+            <div className="flex-1">
+                <div className="text-center font-mono dark:text-white">
+                  Socials            
+                </div>
+                <SocialsList />
+              </div>
+          </div>
+
         </div>
       </main>
     </>
   );
 }
+
+export default Home;
