@@ -1,9 +1,9 @@
+import type { MotionProps } from "framer-motion";
 import Image from "next/image";
 import useDarkMode from "use-dark-mode";
-import { motion } from "framer-motion";
 
 interface Props {
-    Component: React.ComponentType<any>
+    Component: React.ComponentType<MotionProps>
 }
 
 const DarkToggle = ({Component}: Props) => {

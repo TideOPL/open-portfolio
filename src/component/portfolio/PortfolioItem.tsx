@@ -10,14 +10,14 @@ interface Props {
     url?: string;
 }
 
-const PortfolioItem = ({title, subtitle, body, image, url, imageType, imagePadding}: Props) => {
+const PortfolioItem = ({title, subtitle, image, url, imageType, imagePadding}: Props) => {
     return (
         <button className="group flex min-w-full h-56 cursor-default relative bg-slate-700 dark:bg-slate-800 rounded-lg overflow-hidden  ">
             <div className={`group-hover:opacity-30 group-focus:opacity-30 transition ease-linear`}>
                 <Image
                     src={image}
                     alt={title}
-                    className={`${imagePadding && `py-${imagePadding}`}`}
+                    className={'flex ' + `${imagePadding ? "py-12" : "py-0"}`}
                     fill
                     objectFit={imageType}
                 />

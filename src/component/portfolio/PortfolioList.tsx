@@ -1,8 +1,6 @@
-import { useRouter } from "next/router";
 import PortfolioItem from "./PortfolioItem"
 
 const PortfolioList = () => {
-    const router = useRouter();
     return (
         <div className="min-w-full grid sm:grid-cols-1 md:grid-cols-2 py-12 lg:grid-cols-3 gap-5">
             <PortfolioItem title="Wembley Partners" subtitle="Part Time" body="Test1" image="/wembleypartners.png" imageType="cover" url={'https://orna.app'} />
