@@ -1,31 +1,29 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
 import DarkToggle from "~/component/DarkToggle";
-import Hero from "~/component/Hero";
+import Footer from "~/component/Footer";
+import Content from "~/component/home/Content";
+import Nav from "~/component/home/nav/Nav";
 import SocialsList from "~/component/social/SocialsList";
-
 
 const Home = () => {
 
   return (
-    <>
+    <div className="viewport-full bg-[#FDFDFD] dark:bg-[#1b1b1d]">
       <Head>
         <title>Obi Newman</title>
         <meta name="description" content="A Junior Software Engineer skilled in Full-Stack Website Development & React Native.  " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <main className="flex min-h-screen min-w-full bg-[#FDFDFD] dark:bg-[#1b1b1d] overflow-hidden">
-        <div className="min-h-fit min-w-fit absolute px-5 py-5" >
+        <div className="top-container flex justify-between min-h-fit min-w-full absolute px-5 py-5" >
           <DarkToggle Component={motion.div} />
+          <Nav />
         </div>
-        <div className="flex min-w-full flex-col items-center sm:justify-start lg:justify-center">
-          <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-            <Hero />
-            <div className="space-y-2.5">
-              <div className="text-center font-mono dark:text-white">
-                {"I'm a Junior Software Engineer skilled in Full-Stack Website Development & React Native."}     
-              </div>
-            </div>
+        <div className="flex min-h-full min-w-full flex-col items-center sm:justify-start lg:justify-center">
+          <div className="container flex h-full flex-col items-center justify-center gap-12 px-4 py-16 ">
+            <Content />
             <div className="flex-1">
                 <div className="text-center font-mono dark:text-white">
                   Socials            
@@ -33,10 +31,12 @@ const Home = () => {
                 <SocialsList />
               </div>
           </div>
-
+          <div className="justify-self-end">
+            <Footer />
+          </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 
