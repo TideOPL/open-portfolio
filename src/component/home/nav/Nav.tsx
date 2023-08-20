@@ -4,6 +4,9 @@ import NavButton from './NavButton';
 const Nav = () => {
     return (
         <div className='flex flex-row space-x-4'>
+            <NavButton url='https://github.com/TideOPL'>
+                Github
+            </NavButton>
             <NavButton url='mailto:contactobinewman@gmail.com'>
                 Contact
             </NavButton>

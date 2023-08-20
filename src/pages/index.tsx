@@ -7,17 +7,19 @@ import Nav from "~/component/home/nav/Nav";
 import SocialsList from "~/component/social/SocialsList";
 
 const Home = () => {
-
   return (
     <div className="viewport-full bg-[#FDFDFD] dark:bg-[#1b1b1d]">
       <Head>
         <title>Obi Newman</title>
-        <meta name="description" content="A Junior Software Engineer skilled in Full-Stack Website Development & React Native.  " />
+        <meta
+          name="description"
+          content="A Junior Software Engineer skilled in Full-Stack Website Development & React Native.  "
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <main className="flex min-h-screen min-w-full bg-[#FDFDFD] dark:bg-[#1b1b1d] overflow-hidden">
-        <div className="top-container flex justify-between min-h-fit min-w-full absolute px-5 py-5" >
+
+      <main className="flex min-h-screen min-w-full overflow-hidden bg-[#FDFDFD] dark:bg-[#1b1b1d]">
+        <div className="top-container absolute flex min-h-fit min-w-full justify-between px-5 py-5">
           <DarkToggle Component={motion.div} />
           <Nav />
         </div>
@@ -25,11 +27,11 @@ const Home = () => {
           <div className="container flex h-full flex-col items-center justify-center gap-12 px-4 py-16 ">
             <Content />
             <div className="flex-1">
-                <div className="text-center font-mono dark:text-white">
-                  Socials            
-                </div>
-                <SocialsList />
+              <div className="text-center font-mono dark:text-white">
+                Socials
               </div>
+              <SocialsList />
+            </div>
           </div>
           <div className="justify-self-end">
             <Footer />
@@ -38,6 +40,6 @@ const Home = () => {
       </main>
     </div>
   );
-}
+};
 
 export default Home;

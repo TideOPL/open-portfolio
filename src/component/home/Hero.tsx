@@ -1,12 +1,11 @@
 import Title from "./hero/Title";
 import Typewriting from "./hero/Typewriting";
 
-
 const Hero = () => (
-    <>
-        <Title />
-        <Typewriting />
-    </>
-)
+  <>
+    <Title />
+    <Typewriting />
+  </>
+);
 
 export default Hero;

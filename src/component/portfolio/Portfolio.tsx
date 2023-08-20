@@ -1,11 +1,11 @@
-import PortfolioList from "./PortfolioList"
+import PortfolioList from "./PortfolioList";
 
 const Portfolio = () => {
-    return (
-        <div className="min-w-full min-h-fit">
-            <PortfolioList />
-        </div>
-    )
-}
+  return (
+    <div className="min-h-fit min-w-full">
+      <PortfolioList />
+    </div>
+  );
+};
 
 export default Portfolio;
