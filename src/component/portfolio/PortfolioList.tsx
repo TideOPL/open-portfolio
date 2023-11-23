@@ -37,6 +37,14 @@ const PortfolioList = () => {
         imageType="contain"
         url="https://nearsocial.app/"
       />
+      <PortfolioItem
+        title="Optimum Student Support"
+        subtitle="Full Time"
+        body="Test4"
+        image="/optimum-logo.png"
+        imageType="contain"
+        url="https://optimumstudentsupport.co.uk/"
+      />
     </div>
   );
 };
